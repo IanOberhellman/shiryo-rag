@@ -1,0 +1,14 @@
+# Secrets — never commit
+.env
+
+# Local data
+chroma_db/
+docs/*.pdf
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Streamlit
+.streamlit/secrets.toml

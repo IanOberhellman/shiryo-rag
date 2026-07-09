@@ -1,0 +1,77 @@
+[
+  {
+    "question": "How many hours per week can international students work part-time during the semester?",
+    "answerable": true,
+    "expected_keywords": ["28"]
+  },
+  {
+    "question": "How many hours per week can international students work during semester breaks?",
+    "answerable": true,
+    "expected_keywords": ["40"]
+  },
+  {
+    "question": "What percentage of medical bills does National Health Insurance cover?",
+    "answerable": true,
+    "expected_keywords": ["70"]
+  },
+  {
+    "question": "Within how many days of arriving in Japan must I join National Health Insurance?",
+    "answerable": true,
+    "expected_keywords": ["14"]
+  },
+  {
+    "question": "What minimum cumulative GPA must visa-sponsored students maintain?",
+    "answerable": true,
+    "expected_keywords": ["2.0"]
+  },
+  {
+    "question": "Where is the designated smoking area at TUJ?",
+    "answerable": true,
+    "expected_keywords": ["rooftop"]
+  },
+  {
+    "question": "Can students under 20 years old drink alcohol in Japan?",
+    "answerable": true,
+    "expected_keywords": ["20"]
+  },
+  {
+    "question": "What is the first thing I should do if a severe earthquake happens while I am on campus?",
+    "answerable": true,
+    "expected_keywords": ["desk"]
+  },
+  {
+    "question": "How many types of trash does TUJ sort?",
+    "answerable": true,
+    "expected_keywords": ["six"]
+  },
+  {
+    "question": "What is the Japanese name of the work permission that students on a student visa apply for?",
+    "answerable": true,
+    "expected_keywords": ["Shikakugai"]
+  },
+  {
+    "question": "Are pets allowed on the TUJ campus?",
+    "answerable": true,
+    "expected_keywords": ["service"]
+  },
+  {
+    "question": "How long does the work permit application process usually take?",
+    "answerable": true,
+    "expected_keywords": ["three weeks"]
+  },
+  {
+    "question": "What is the tuition per credit hour at TUJ?",
+    "answerable": false,
+    "expected_keywords": []
+  },
+  {
+    "question": "What is the campus wifi password?",
+    "answerable": false,
+    "expected_keywords": []
+  },
+  {
+    "question": "What date is the Spring 2027 graduation ceremony?",
+    "answerable": false,
+    "expected_keywords": []
+  }
+]
