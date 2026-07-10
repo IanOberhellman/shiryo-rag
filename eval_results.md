@@ -1,6 +1,6 @@
 # Eval results
 
-**Score: 15/15 (100%)** — 3/3 trick questions correctly refused
+**Score: 16/16 (100%)** — 3/3 trick questions correctly refused
 
 | # | Question | Type | Result | Notes |
 |---|---|---|---|---|
@@ -16,6 +16,7 @@
 | 10 | What is the Japanese name of the work permission that students on a student visa apply for? | answerable | ✅ PASS | answer contains expected facts, with citations |
 | 11 | Are pets allowed on the TUJ campus? | answerable | ✅ PASS | answer contains expected facts, with citations |
 | 12 | How long does the work permit application process usually take? | answerable | ✅ PASS | answer contains expected facts, with citations |
-| 13 | What is the tuition per credit hour at TUJ? | trick (not in docs) | ✅ PASS | correctly refused (not in documents) |
-| 14 | What is the campus wifi password? | trick (not in docs) | ✅ PASS | correctly refused (not in documents) |
-| 15 | What date is the Spring 2027 graduation ceremony? | trick (not in docs) | ✅ PASS | correctly refused (not in documents) |
+| 13 | Does TUJ offer a major in Artificial Intelligence? | answerable | ✅ PASS | answer contains expected facts, with citations |
+| 14 | What is the tuition per credit hour at TUJ? | trick (not in docs) | ✅ PASS | correctly refused (not in documents) |
+| 15 | What is the campus wifi password? | trick (not in docs) | ✅ PASS | correctly refused (not in documents) |
+| 16 | What date is the Spring 2027 graduation ceremony? | trick (not in docs) | ✅ PASS | correctly refused (not in documents) |

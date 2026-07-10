@@ -25,10 +25,23 @@ def split_long(text: str) -> list[str]:
 
 def main():
     pdfs = sorted(f for f in os.listdir(DOCS_DIR) if f.endswith(".pdf"))
-    if not pdfs:
-        raise SystemExit("No PDFs in docs/ — see README for download instructions.")
+    txts = sorted(f for f in os.listdir(DOCS_DIR) if f.endswith(".txt"))
+    if not pdfs and not txts:
+        raise SystemExit("No documents in docs/ — see README for download instructions.")
 
     ids, texts, metas = [], [], []
+
+    for txt in txts:
+        short = txt.replace(".txt", "").replace("tuj-", "")[:30]
+        with open(os.path.join(DOCS_DIR, txt)) as f:
+            content = f.read().strip()
+        parts = split_long(content)
+        for part_num, part in enumerate(parts):
+            suffix = f"-{chr(97 + part_num)}" if len(parts) > 1 else ""
+            ids.append(f"{short}{suffix}")
+            texts.append(part)
+            metas.append({"source": txt, "page": 1})
+
     for pdf in pdfs:
         short = pdf.replace(".pdf", "").replace("tuj-", "")[:30]
         reader = PdfReader(os.path.join(DOCS_DIR, pdf))
@@ -55,7 +68,7 @@ def main():
         col.add(ids=ids[i : i + BATCH], documents=texts[i : i + BATCH], metadatas=metas[i : i + BATCH])
         print(f"embedded {min(i + BATCH, len(ids))}/{len(ids)} chunks")
 
-    print(f"Done: {len(ids)} chunks from {len(pdfs)} PDFs -> {DB_DIR}")
+    print(f"Done: {len(ids)} chunks from {len(pdfs) + len(txts)} documents -> {DB_DIR}")
 
 
 if __name__ == "__main__":

@@ -60,6 +60,11 @@
     "expected_keywords": ["three weeks"]
   },
   {
+    "question": "Does TUJ offer a major in Artificial Intelligence?",
+    "answerable": true,
+    "expected_keywords": ["Artificial Intelligence", "2026"]
+  },
+  {
     "question": "What is the tuition per credit hour at TUJ?",
     "answerable": false,
     "expected_keywords": []

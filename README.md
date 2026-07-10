@@ -13,11 +13,14 @@ The exam: 15 questions against the two official TUJ student handbooks — 12 wit
 | Run | Score | Hallucinations on trick questions |
 |---|---|---|
 | v1 (retrieval k=5) | 14/15 (93%) | 0/3 |
-| v2 (retrieval k=8) | **15/15 (100%)** | **0/3** |
+| v2 (retrieval k=8) | 15/15 (100%) | 0/3 |
+| v3 (+1 document, +1 question) | **16/16 (100%)** | **0/3** |
 
 The v1 failure was diagnostic gold: "How long does the work permit application process take?" was wrongly refused. Investigation showed the chunk containing the answer ranked **7th** in retrieval while the system only fetched the top 5 — the knowledge was indexed but never reached the model. Raising retrieval depth to k=8 fixed it without regressing any other question. Full per-question results: [eval_results.md](eval_results.md).
 
 This is why the eval exists: without it, that failure would have been invisible.
+
+**v3 demonstrates RAG's operational superpower — updating knowledge by filing a document.** During testing, "Does TUJ have an AI major?" was (correctly) refused: the student-life handbooks don't mention the brand-new Fall 2026 B.S. in Artificial Intelligence. Adding TUJ's [official announcement](https://en-news.tuj.ac.jp/2026/04/03/bachelor-of-science-in-artificial-intelligence/) as one text file and re-running `ingest.py` flipped the answer to *"Yes, launching Fall 2026"* — with a citation. No retraining, no code changes: updating the AI's knowledge is a filing task.
 
 ## Architecture
 
